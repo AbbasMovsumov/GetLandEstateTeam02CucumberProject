@@ -1,4 +1,6 @@
 package getLandEstate.pages;
 public class ContactPage {
-    //jhfjehfjehji
+    public static void main(String[] args) {
+        System.out.println("hss");
+    }
 }
