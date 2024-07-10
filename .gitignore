@@ -36,3 +36,9 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+#Getland Proje asamasinda yapilan ignore
+.idea
+target
+
+
