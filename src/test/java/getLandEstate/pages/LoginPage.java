@@ -6,13 +6,19 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginPage {
+  
+   public LoginPage() {
+        PageFactory.initElements(getDriver(), this);
+    }
 
-    @FindBy(xpath = "")
-    public WebElement username;
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//input[@placeholder='Email']")
+    public WebElement emailField;
+    @FindBy(xpath = "//input[@name='password']")
     public WebElement password;
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//button[@type='submit']")
     public WebElement loginButton;
+    @FindBy(xpath = "//*[@href='/login']")
+    public WebElement Login;
 
     public void loginWithRole(String role) {
 
@@ -35,5 +41,4 @@ public class LoginPage {
             default:
                 throw new IllegalArgumentException(String.format("Unexpected value for role %s", role));
         }
-    }
 }
