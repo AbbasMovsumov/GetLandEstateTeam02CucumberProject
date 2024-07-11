@@ -1,4 +1,4 @@
 package getLandEstate.stepDefinitons.uiStepDef;
 
-public class Test {
+public class MyTourRequestsStepDef {
 }
