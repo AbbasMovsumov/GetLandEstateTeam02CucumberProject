@@ -21,10 +21,11 @@ public class LoginPage {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement loginButton;
     @FindBy(xpath = "//*[@href='/login']")
-    public WebElement Login;
+    public WebElement login;
 
     public void loginWithRole(String role) {
-
+        Driver.getDriver().get(ConfigReader.getProperty("url"));
+        login.click();
         switch (role) {
             case "Admin":
                 emailField.sendKeys(ConfigReader.getProperty("adminEmail"));
