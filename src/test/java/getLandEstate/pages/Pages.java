@@ -4,14 +4,14 @@ public class Pages {
     public Pages(){}
 
     private ContactPage contactPage;
-    private ControlPanelAdvertsPage controlPanelAdvertsPage;
-    private ControlPanelAdvertTypesPage controlPanelAdvertTypesPage;
-    private ControlPanelCategoriesPage controlPanelCategoriesPage;
-    private ControlPanelContactMessagesPage controlPanelContactMessagesPage;
-    private ControlPanelDashboardPage controlPanelDashboardPage;
-    private ControlPanelReportsPage controlPanelReportsPage;
-    private ControlPanelTourRequestsPage controlPanelTourRequestsPage;
-    private ControlPanelUsersPage controlPanelUsersPage;
+    private CPAdvertsPage CPAdvertsPage;
+    private CPAdvertTypesPage CPAdvertTypesPage;
+    private CPCategoriesPage CPCategoriesPage;
+    private CPContactMessagesPage CPContactMessagesPage;
+    private CPDashboardPage CPDashboardPage;
+    private CPReportsPage CPReportsPage;
+    private CPTourRequestsPage controlPanelTourRequestsPage;
+    private CPUsersPage CPUsersPage;
     private HomePage homePage;
     private LoginPage loginPage;
     private MyAdvertsPage myAdvertsPage;
@@ -29,53 +29,53 @@ public class Pages {
         }
         return contactPage;
     }
-    public ControlPanelAdvertsPage controlPanelAdvertsPage(){
-        if (controlPanelAdvertsPage == null){
-            controlPanelAdvertsPage = new ControlPanelAdvertsPage();
+    public CPAdvertsPage controlPanelAdvertsPage(){
+        if (CPAdvertsPage == null){
+            CPAdvertsPage = new CPAdvertsPage();
         }
-        return controlPanelAdvertsPage;
+        return CPAdvertsPage;
     }
-    public ControlPanelAdvertTypesPage controlPanelAdvertTypesPage(){
-        if (controlPanelAdvertTypesPage == null){
-            controlPanelAdvertTypesPage = new ControlPanelAdvertTypesPage();
+    public CPAdvertTypesPage controlPanelAdvertTypesPage(){
+        if (CPAdvertTypesPage == null){
+            CPAdvertTypesPage = new CPAdvertTypesPage();
         }
-        return controlPanelAdvertTypesPage;
+        return CPAdvertTypesPage;
     }
-    public ControlPanelCategoriesPage controlPanelCategoriesPage(){
-        if (controlPanelCategoriesPage == null){
-            controlPanelCategoriesPage = new ControlPanelCategoriesPage();
+    public CPCategoriesPage controlPanelCategoriesPage(){
+        if (CPCategoriesPage == null){
+            CPCategoriesPage = new CPCategoriesPage();
         }
-        return controlPanelCategoriesPage;
+        return CPCategoriesPage;
     }
-    public ControlPanelContactMessagesPage controlPanelContactMessagesPage(){
-        if (controlPanelContactMessagesPage == null){
-            controlPanelContactMessagesPage = new ControlPanelContactMessagesPage();
+    public CPContactMessagesPage controlPanelContactMessagesPage(){
+        if (CPContactMessagesPage == null){
+            CPContactMessagesPage = new CPContactMessagesPage();
         }
-        return controlPanelContactMessagesPage;
+        return CPContactMessagesPage;
     }
-    public ControlPanelDashboardPage controlPanelDashboardPage(){
-        if (controlPanelDashboardPage == null){
-            controlPanelDashboardPage = new ControlPanelDashboardPage();
+    public CPDashboardPage controlPanelDashboardPage(){
+        if (CPDashboardPage == null){
+            CPDashboardPage = new CPDashboardPage();
         }
-        return controlPanelDashboardPage;
+        return CPDashboardPage;
     }
-    public ControlPanelReportsPage controlPanelReportsPage(){
-        if (controlPanelReportsPage == null){
-            controlPanelReportsPage = new ControlPanelReportsPage();
+    public CPReportsPage controlPanelReportsPage(){
+        if (CPReportsPage == null){
+            CPReportsPage = new CPReportsPage();
         }
-        return controlPanelReportsPage;
+        return CPReportsPage;
     }
-    public ControlPanelTourRequestsPage controlPanelTourRequestsPage(){
+    public CPTourRequestsPage controlPanelTourRequestsPage(){
         if (controlPanelTourRequestsPage == null){
-            controlPanelTourRequestsPage = new ControlPanelTourRequestsPage();
+            controlPanelTourRequestsPage = new CPTourRequestsPage();
         }
         return controlPanelTourRequestsPage;
     }
-    public ControlPanelUsersPage controlPanelUsersPage(){
-        if (controlPanelUsersPage == null){
-            controlPanelUsersPage = new ControlPanelUsersPage();
+    public CPUsersPage controlPanelUsersPage(){
+        if (CPUsersPage == null){
+            CPUsersPage = new CPUsersPage();
         }
-        return controlPanelUsersPage;
+        return CPUsersPage;
     }
     public HomePage homePage(){
         if (homePage == null){
