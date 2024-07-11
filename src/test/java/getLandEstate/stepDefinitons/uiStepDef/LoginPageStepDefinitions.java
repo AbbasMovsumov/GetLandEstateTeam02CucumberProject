@@ -26,7 +26,7 @@ public class LoginPageStepDefinitions {
     @And("the user enters customer credentials in the Email and Password fields")
     public void theUserEntersCustomerCredentialsInTheEmailAndPasswordFields() {
         allPages.loginPage().emailField.sendKeys(ConfigReader.getProperty("customerEmail"));
-        allPages.loginPage().passwordField.sendKeys(ConfigReader.getProperty("customerPassword"));
+        allPages.loginPage().password.sendKeys(ConfigReader.getProperty("customerPassword"));
     }
 
     @And("the user clicks the Login button")
