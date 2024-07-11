@@ -4,6 +4,14 @@ public class Pages {
     public Pages(){}
 
     private ContactPage contactPage;
+    private ControlPanelAdvertsPage controlPanelAdvertsPage;
+    private ControlPanelAdvertTypesPage controlPanelAdvertTypesPage;
+    private ControlPanelCategoriesPage controlPanelCategoriesPage;
+    private ControlPanelContactMessagesPage controlPanelContactMessagesPage;
+    private ControlPanelDashboardPage controlPanelDashboardPage;
+    private ControlPanelReportsPage controlPanelReportsPage;
+    private ControlPanelTourRequestsPage controlPanelTourRequestsPage;
+    private ControlPanelUsersPage controlPanelUsersPage;
     private CPAdvertsPage CPAdvertsPage;
     private CPAdvertTypesPage CPAdvertTypesPage;
     private CPCategoriesPage CPCategoriesPage;
@@ -22,13 +30,61 @@ public class Pages {
     private PropertiesPage propertiesPage;
     private RegisterPage registerPage;
 
-
     public ContactPage contactPage(){
         if (contactPage == null){
             contactPage = new ContactPage();
         }
         return contactPage;
     }
+
+    public ControlPanelAdvertsPage controlPanelAdvertsPage(){
+        if (controlPanelAdvertsPage == null){
+            controlPanelAdvertsPage = new ControlPanelAdvertsPage();
+        }
+        return controlPanelAdvertsPage;
+    }
+    public ControlPanelAdvertTypesPage controlPanelAdvertTypesPage(){
+        if (controlPanelAdvertTypesPage == null){
+            controlPanelAdvertTypesPage = new ControlPanelAdvertTypesPage();
+        }
+        return controlPanelAdvertTypesPage;
+    }
+    public ControlPanelCategoriesPage controlPanelCategoriesPage(){
+        if (controlPanelCategoriesPage == null){
+            controlPanelCategoriesPage = new ControlPanelCategoriesPage();
+        }
+        return controlPanelCategoriesPage;
+    }
+    public ControlPanelContactMessagesPage controlPanelContactMessagesPage(){
+        if (controlPanelContactMessagesPage == null){
+            controlPanelContactMessagesPage = new ControlPanelContactMessagesPage();
+        }
+        return controlPanelContactMessagesPage;
+    }
+    public ControlPanelDashboardPage controlPanelDashboardPage(){
+        if (controlPanelDashboardPage == null){
+            controlPanelDashboardPage = new ControlPanelDashboardPage();
+        }
+        return controlPanelDashboardPage;
+    }
+    public ControlPanelReportsPage controlPanelReportsPage(){
+        if (controlPanelReportsPage == null){
+            controlPanelReportsPage = new ControlPanelReportsPage();
+        }
+        return controlPanelReportsPage;
+    }
+    public ControlPanelTourRequestsPage controlPanelTourRequestsPage(){
+        if (controlPanelTourRequestsPage == null){
+            controlPanelTourRequestsPage = new ControlPanelTourRequestsPage();
+        }
+        return controlPanelTourRequestsPage;
+    }
+    public ControlPanelUsersPage controlPanelUsersPage(){
+        if (controlPanelUsersPage == null){
+            controlPanelUsersPage = new ControlPanelUsersPage();
+        }
+        return controlPanelUsersPage;
+
     public CPAdvertsPage controlPanelAdvertsPage(){
         if (CPAdvertsPage == null){
             CPAdvertsPage = new CPAdvertsPage();
@@ -76,6 +132,7 @@ public class Pages {
             CPUsersPage = new CPUsersPage();
         }
         return CPUsersPage;
+
     }
     public HomePage homePage(){
         if (homePage == null){
@@ -131,4 +188,4 @@ public class Pages {
         }
         return registerPage;
     }
-}
+
