@@ -1,20 +1,23 @@
 package getLandEstate.pages;
 
 import getLandEstate.utilities.ConfigReader;
+import getLandEstate.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
-  
-   public LoginPage() {
-        PageFactory.initElements(getDriver(), this);
+
+    public LoginPage() {
+
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy(xpath = "//input[@placeholder='Email']")
     public WebElement emailField;
     @FindBy(xpath = "//input[@name='password']")
-    public WebElement password;
+    public WebElement passwordField;
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement loginButton;
     @FindBy(xpath = "//*[@href='/login']")
@@ -24,21 +27,22 @@ public class LoginPage {
 
         switch (role) {
             case "Admin":
-                username.sendKeys(ConfigReader.getProperty("adminEmail"));
-                password.sendKeys(ConfigReader.getProperty("adminPassword"));
+                emailField.sendKeys(ConfigReader.getProperty("adminEmail"));
+                passwordField.sendKeys(ConfigReader.getProperty("adminPassword"));
                 loginButton.click();
                 break;
             case "Manager":
-                username.sendKeys(ConfigReader.getProperty("managerEmail"));
-                password.sendKeys(ConfigReader.getProperty("managerPassword"));
+                emailField.sendKeys(ConfigReader.getProperty("managerEmail"));
+                passwordField.sendKeys(ConfigReader.getProperty("managerPassword"));
                 loginButton.click();
                 break;
             case "Customer":
-                username.sendKeys(ConfigReader.getProperty("customerEmail"));
-                password.sendKeys(ConfigReader.getProperty("customerPassword"));
+                emailField.sendKeys(ConfigReader.getProperty("customerEmail"));
+                passwordField.sendKeys(ConfigReader.getProperty("customerPassword"));
                 loginButton.click();
                 break;
             default:
                 throw new IllegalArgumentException(String.format("Unexpected value for role %s", role));
         }
+    }
 }

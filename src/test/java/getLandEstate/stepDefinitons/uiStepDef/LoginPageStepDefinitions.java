@@ -4,7 +4,6 @@ import getLandEstate.pages.Pages;
 import getLandEstate.utilities.ConfigReader;
 import getLandEstate.utilities.Driver;
 import io.cucumber.java.en.*;
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
