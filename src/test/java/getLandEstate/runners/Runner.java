@@ -15,13 +15,21 @@ import org.junit.runner.RunWith;
                 "rerun:TestOutput/failed_scenario.txt"
                 //rerun plugin i ile fail olan scenariolari burada belirtmis oldugumuz failed_scenario.txt dosyasi icinde tutariz
         },
+<<<<<<< HEAD
         features = "src/test/resources/features",
         glue = {"getLandEstate.stepDefinitons.uiStepDef", "getLandEstate.hooks"},
         tags = "@US04",
+=======
+        features = "src/test/resources/features/ui-features",
+        glue = {"getLandEstate/stepDefinitions", "getLandEstate/hooks"},
+        tags = "0",
+>>>>>>> main
         dryRun = false,
         monochrome = false//eger true kullanirsak konsoldaki ciktilari tek renk siyah olarak verir
 )
 public class Runner {
+        // merhaba
+
 }
 /*
     dryRun parametresi eger true secili ise scenariolari calistirmadan feature file daki steplerin eksik
