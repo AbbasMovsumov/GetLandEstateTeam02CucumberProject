@@ -15,9 +15,9 @@ import org.junit.runner.RunWith;
                 "rerun:TestOutput/failed_scenario.txt"
                 //rerun plugin i ile fail olan scenariolari burada belirtmis oldugumuz failed_scenario.txt dosyasi icinde tutariz
         },
-        features = "src/test/resources/features",
+        features = "src/test/resources/features/ui-features",
         glue = {"getLandEstate/stepDefinitions", "getLandEstate/hooks"},
-        tags = "@US013",
+        tags = "0",
         dryRun = false,
         monochrome = false//eger true kullanirsak konsoldaki ciktilari tek renk siyah olarak verir
 )
