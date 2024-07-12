@@ -24,7 +24,7 @@ import org.junit.runner.RunWith;
         monochrome = false//eger true kullanirsak konsoldaki ciktilari tek renk siyah olarak verir
 )
 public class Runner {
-        // merhaba
+
 
 }
 /*

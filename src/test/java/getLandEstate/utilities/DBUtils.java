@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class DBUtils {
+public class DBUtils { //jdbc
     // Connection: Veritabanına bağlanmak için kullanılır
     private static Connection connection;
     // Statement: Sorgu yazmak için kullanılır
