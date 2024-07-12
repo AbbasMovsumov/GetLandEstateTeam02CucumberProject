@@ -11,7 +11,7 @@ public class Hook {
     /*@Before("@api")
     public void setUp() throws Exception {
         spec =  new RequestSpecBuilder() >>>RequestSpecBuilder: spec isimli bir RequestSpecification nesnesi oluşturur. Bu nesne, API isteklerinin temel yapılandırmasını içerir.
-                .setBaseUri("https://medunna.com") >>İsteklerin gönderileceği temel URL'yi belirler.
+                .setBaseUrl("https://medunna.com") >>İsteklerin gönderileceği temel URL'yi belirler.
                 .setContentType(ContentType.JSON) >>İsteklerin JSON formatında olacağını belirtir.
                 .addHeader("Authorization", "Bearer "+Authentication.generateToken()) >>İsteklere Authorization başlığı ekler. Bu başlık, Authentication.generateToken() metodu ile üretilen bir token'ı içerir.
                 .build(); >>Yapılandırmayı tamamlar ve spec değişkenine atar.
