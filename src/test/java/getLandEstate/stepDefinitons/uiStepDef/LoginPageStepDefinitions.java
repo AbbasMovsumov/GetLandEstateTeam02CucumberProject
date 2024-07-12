@@ -20,7 +20,7 @@ public class LoginPageStepDefinitions {
 
     @When("the user clicks on {string}")
     public void theUserClicksOn(String Login) {
-       click(allPages.loginPage().Login);
+       click(allPages.loginPage().login);
     }
 
     @And("the user enters customer credentials in the Email and Password fields")
@@ -42,4 +42,8 @@ public class LoginPageStepDefinitions {
     }
 
 
+    @Given("user login as {string} role")
+    public void userLoginAsRole(String role) {
+        allPages.loginPage().loginWithRole(role);
+    }
 }
