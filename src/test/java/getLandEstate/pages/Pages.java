@@ -4,14 +4,7 @@ public class Pages {
     public Pages(){}
 
     private ContactPage contactPage;
-    private ControlPanelAdvertsPage controlPanelAdvertsPage;
-    private ControlPanelAdvertTypesPage controlPanelAdvertTypesPage;
-    private ControlPanelCategoriesPage controlPanelCategoriesPage;
-    private ControlPanelContactMessagesPage controlPanelContactMessagesPage;
-    private ControlPanelDashboardPage controlPanelDashboardPage;
-    private ControlPanelReportsPage controlPanelReportsPage;
-    private ControlPanelTourRequestsPage controlPanelTourRequestsPage;
-    private ControlPanelUsersPage controlPanelUsersPage;
+
     private CPAdvertsPage CPAdvertsPage;
     private CPAdvertTypesPage CPAdvertTypesPage;
     private CPCategoriesPage CPCategoriesPage;
@@ -37,155 +30,107 @@ public class Pages {
         return contactPage;
     }
 
-    public ControlPanelAdvertsPage controlPanelAdvertsPage(){
-        if (controlPanelAdvertsPage == null){
-            controlPanelAdvertsPage = new ControlPanelAdvertsPage();
+        public CPAdvertsPage controlPanelAdvertsPage(){
+            if (CPAdvertsPage == null){
+                CPAdvertsPage = new CPAdvertsPage();
+            }
+            return CPAdvertsPage;
         }
-        return controlPanelAdvertsPage;
-    }
-    public ControlPanelAdvertTypesPage controlPanelAdvertTypesPage(){
-        if (controlPanelAdvertTypesPage == null){
-            controlPanelAdvertTypesPage = new ControlPanelAdvertTypesPage();
+        public CPAdvertTypesPage controlPanelAdvertTypesPage(){
+            if (CPAdvertTypesPage == null){
+                CPAdvertTypesPage = new CPAdvertTypesPage();
+            }
+            return CPAdvertTypesPage;
         }
-        return controlPanelAdvertTypesPage;
-    }
-    public ControlPanelCategoriesPage controlPanelCategoriesPage(){
-        if (controlPanelCategoriesPage == null){
-            controlPanelCategoriesPage = new ControlPanelCategoriesPage();
+        public CPCategoriesPage controlPanelCategoriesPage(){
+            if (CPCategoriesPage == null){
+                CPCategoriesPage = new CPCategoriesPage();
+            }
+            return CPCategoriesPage;
         }
-        return controlPanelCategoriesPage;
-    }
-    public ControlPanelContactMessagesPage controlPanelContactMessagesPage(){
-        if (controlPanelContactMessagesPage == null){
-            controlPanelContactMessagesPage = new ControlPanelContactMessagesPage();
+        public CPContactMessagesPage controlPanelContactMessagesPage(){
+            if (CPContactMessagesPage == null){
+                CPContactMessagesPage = new CPContactMessagesPage();
+            }
+            return CPContactMessagesPage;
         }
-        return controlPanelContactMessagesPage;
-    }
-    public ControlPanelDashboardPage controlPanelDashboardPage(){
-        if (controlPanelDashboardPage == null){
-            controlPanelDashboardPage = new ControlPanelDashboardPage();
+        public CPDashboardPage controlPanelDashboardPage(){
+            if (CPDashboardPage == null){
+                CPDashboardPage = new CPDashboardPage();
+            }
+            return CPDashboardPage;
         }
-        return controlPanelDashboardPage;
-    }
-    public ControlPanelReportsPage controlPanelReportsPage(){
-        if (controlPanelReportsPage == null){
-            controlPanelReportsPage = new ControlPanelReportsPage();
+        public CPReportsPage controlPanelReportsPage(){
+            if (CPReportsPage == null){
+                CPReportsPage = new CPReportsPage();
+            }
+            return CPReportsPage;
         }
-        return controlPanelReportsPage;
-    }
-    public ControlPanelTourRequestsPage controlPanelTourRequestsPage(){
-        if (controlPanelTourRequestsPage == null){
-            controlPanelTourRequestsPage = new ControlPanelTourRequestsPage();
+        public CPTourRequestsPage controlPanelTourRequestsPage(){
+            if (controlPanelTourRequestsPage == null){
+                controlPanelTourRequestsPage = new CPTourRequestsPage();
+            }
+            return controlPanelTourRequestsPage;
         }
-        return controlPanelTourRequestsPage;
-    }
-    public ControlPanelUsersPage controlPanelUsersPage(){
-        if (controlPanelUsersPage == null){
-            controlPanelUsersPage = new ControlPanelUsersPage();
-        }
-        return controlPanelUsersPage;
+        public CPUsersPage controlPanelUsersPage(){
+            if (CPUsersPage == null){
+                CPUsersPage = new CPUsersPage();
+            }
+            return CPUsersPage;
 
-    public CPAdvertsPage controlPanelAdvertsPage(){
-        if (CPAdvertsPage == null){
-            CPAdvertsPage = new CPAdvertsPage();
         }
-        return CPAdvertsPage;
-    }
-    public CPAdvertTypesPage controlPanelAdvertTypesPage(){
-        if (CPAdvertTypesPage == null){
-            CPAdvertTypesPage = new CPAdvertTypesPage();
+        public HomePage homePage(){
+            if (homePage == null){
+                homePage = new HomePage();
+            }
+            return homePage;
         }
-        return CPAdvertTypesPage;
-    }
-    public CPCategoriesPage controlPanelCategoriesPage(){
-        if (CPCategoriesPage == null){
-            CPCategoriesPage = new CPCategoriesPage();
+        public LoginPage loginPage(){
+            if (loginPage == null){
+                loginPage = new LoginPage();
+            }
+            return loginPage;
         }
-        return CPCategoriesPage;
-    }
-    public CPContactMessagesPage controlPanelContactMessagesPage(){
-        if (CPContactMessagesPage == null){
-            CPContactMessagesPage = new CPContactMessagesPage();
+        public MyAdvertsPage myAdvertsPage(){
+            if (myAdvertsPage == null){
+                myAdvertsPage = new MyAdvertsPage();
+            }
+            return myAdvertsPage;
         }
-        return CPContactMessagesPage;
-    }
-    public CPDashboardPage controlPanelDashboardPage(){
-        if (CPDashboardPage == null){
-            CPDashboardPage = new CPDashboardPage();
+        public MyFavoritesPage myFavoritesPage(){
+            if (myFavoritesPage == null){
+                myFavoritesPage = new MyFavoritesPage();
+            }
+            return myFavoritesPage;
         }
-        return CPDashboardPage;
-    }
-    public CPReportsPage controlPanelReportsPage(){
-        if (CPReportsPage == null){
-            CPReportsPage = new CPReportsPage();
+        public MyProfilePage myProfilePage(){
+            if (myProfilePage == null){
+                myProfilePage = new MyProfilePage();
+            }
+            return myProfilePage;
         }
-        return CPReportsPage;
-    }
-    public CPTourRequestsPage controlPanelTourRequestsPage(){
-        if (controlPanelTourRequestsPage == null){
-            controlPanelTourRequestsPage = new CPTourRequestsPage();
+        public MyTourRequestsPage myTourRequestsPage(){
+            if (myTourRequestsPage == null){
+                myTourRequestsPage = new MyTourRequestsPage();
+            }
+            return myTourRequestsPage;
         }
-        return controlPanelTourRequestsPage;
-    }
-    public CPUsersPage controlPanelUsersPage(){
-        if (CPUsersPage == null){
-            CPUsersPage = new CPUsersPage();
+        public NewAdvertsPage newAdvertsPage(){
+            if (newAdvertsPage == null){
+                newAdvertsPage = new NewAdvertsPage();
+            }
+            return newAdvertsPage;
         }
-        return CPUsersPage;
-
-    }
-    public HomePage homePage(){
-        if (homePage == null){
-            homePage = new HomePage();
+        public PropertiesPage propertiesPage(){
+            if (propertiesPage == null){
+                propertiesPage = new PropertiesPage();
+            }
+            return propertiesPage;
         }
-        return homePage;
-    }
-    public LoginPage loginPage(){
-        if (loginPage == null){
-            loginPage = new LoginPage();
+        public RegisterPage registerPage(){
+            if (registerPage == null){
+                registerPage = new RegisterPage();
+            }
+            return registerPage;
         }
-        return loginPage;
-    }
-    public MyAdvertsPage myAdvertsPage(){
-        if (myAdvertsPage == null){
-            myAdvertsPage = new MyAdvertsPage();
-        }
-        return myAdvertsPage;
-    }
-    public MyFavoritesPage myFavoritesPage(){
-        if (myFavoritesPage == null){
-            myFavoritesPage = new MyFavoritesPage();
-        }
-        return myFavoritesPage;
-    }
-    public MyProfilePage myProfilePage(){
-        if (myProfilePage == null){
-            myProfilePage = new MyProfilePage();
-        }
-        return myProfilePage;
-    }
-    public MyTourRequestsPage myTourRequestsPage(){
-        if (myTourRequestsPage == null){
-            myTourRequestsPage = new MyTourRequestsPage();
-        }
-        return myTourRequestsPage;
-    }
-    public NewAdvertsPage newAdvertsPage(){
-        if (newAdvertsPage == null){
-            newAdvertsPage = new NewAdvertsPage();
-        }
-        return newAdvertsPage;
-    }
-    public PropertiesPage propertiesPage(){
-        if (propertiesPage == null){
-            propertiesPage = new PropertiesPage();
-        }
-        return propertiesPage;
-    }
-    public RegisterPage registerPage(){
-        if (registerPage == null){
-            registerPage = new RegisterPage();
-        }
-        return registerPage;
-    }
-
+}
