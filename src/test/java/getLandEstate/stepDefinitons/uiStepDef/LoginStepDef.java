@@ -18,20 +18,11 @@ public class LoginStepDef {
      Driver.getDriver().get(ConfigReader.getProperty(url));
   }
 
-
-
-
-
-
     @And("the user clicks on the language selection button")
     public void theUserClicksOnTheLanguageSelectionButton() {
         WebElement languageButton = Driver.getDriver().findElement(By.id("languageSelector")); // Adjust locator as needed
         click(languageButton);
     }
-
-
-
-
 
 
     @Given("user login as {string} role")
