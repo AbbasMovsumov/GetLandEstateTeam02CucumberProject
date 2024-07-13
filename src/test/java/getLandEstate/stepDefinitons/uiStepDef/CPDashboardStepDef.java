@@ -1,5 +1,12 @@
 package getLandEstate.stepDefinitons.uiStepDef;
 
+import getLandEstate.pages.Pages;
+import io.cucumber.java.en.When;
+
 public class CPDashboardStepDef {
-    //bacto site step
+    Pages allPages = new Pages();
+    @When("user clicks Back to Site button")
+    public void userClicksBackToSiteButton() {
+        allPages.controlPanelDashboardPage().backToSiteMenu.click();
+    }
 }
