@@ -13,16 +13,15 @@ public class LoginStepDef {
 
     Pages allPages = new Pages();
 
-    @Given("user goes to {string}")
-    public void userGoesTo(String url) {
-        Driver.getDriver().get(ConfigReader.getProperty(url));
-    }
+   @Given("user goes to {string}")
+   public void userGoesTo(String url) {
+     Driver.getDriver().get(ConfigReader.getProperty(url));
+  }
 
-    @And("the user clicks the Login button")
-    public void theUserClicksTheLoginButton() {
-        WebElement loginButton = Driver.getDriver().findElement(By.xpath("//button[text()='Login']")); // Adjust locator as needed
-        click(loginButton);
-    }
+
+
+
+
 
     @And("the user clicks on the language selection button")
     public void theUserClicksOnTheLanguageSelectionButton() {
@@ -30,7 +29,16 @@ public class LoginStepDef {
         click(languageButton);
     }
 
-    @Given("the user has an active customer account")
-    public void theUserHasAnActiveCustomerAccount() {
+
+
+
+
+
+    @Given("user login as {string} role")
+    public void userLoginAsRole(String role) {
+        allPages.loginPage().loginWithRole(role);
     }
+
+
+
 }

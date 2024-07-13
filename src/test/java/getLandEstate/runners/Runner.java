@@ -13,6 +13,7 @@ import org.junit.runner.RunWith;
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml",
                 "rerun:TestOutput/failed_scenario.txt"
+        },
                 //rerun plugin i ile fail olan scenariolari burada belirtmis oldugumuz failed_scenario.txt dosyasi icinde tutariz
 
         },
