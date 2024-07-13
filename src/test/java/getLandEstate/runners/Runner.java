@@ -16,6 +16,8 @@ import org.junit.runner.RunWith;
         },
                 //rerun plugin i ile fail olan scenariolari burada belirtmis oldugumuz failed_scenario.txt dosyasi icinde tutariz
 
+        },
+
         features = "src/test/resources/features/ui-features",
         glue = {"getLandEstate.stepDefinitons.uiStepDef", "getLandEstate/hooks"},
         tags = "@US04",

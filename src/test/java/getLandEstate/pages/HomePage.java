@@ -1,5 +1,6 @@
 package getLandEstate.pages;
 
+import getLandEstate.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -9,7 +10,7 @@ import static getLandEstate.utilities.Driver.getDriver;
 public class HomePage {
 
     public HomePage() {
-        PageFactory.initElements(getDriver(), this);
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy(xpath = "//a[@class='dropdown-toggle nav-link']")
@@ -30,5 +31,9 @@ public class HomePage {
 
     @FindBy(xpath = "(//a[@aria-selected='false'])[5]")
     public WebElement spanishButton;
+
+    @FindBy(xpath = "//*[text()='Create Property']")
+    public WebElement createPropertyButton;
+
 
 }
