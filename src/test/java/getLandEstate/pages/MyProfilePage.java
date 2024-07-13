@@ -82,6 +82,12 @@ public class MyProfilePage {
     public WebElement deleteAccountButton;
 
 
+    //VERIFY
+    @FindBy(xpath = "//button[@data-rr-ui-event-key='profile']")
+    public WebElement profileButton;
+
+
+
 
 
 

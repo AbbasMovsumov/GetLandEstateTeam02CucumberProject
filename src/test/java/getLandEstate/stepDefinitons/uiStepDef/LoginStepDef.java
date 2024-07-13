@@ -22,6 +22,7 @@ public class LoginStepDef {
 
 
 
+
     @And("the user clicks on the language selection button")
     public void theUserClicksOnTheLanguageSelectionButton() {
         WebElement languageButton = Driver.getDriver().findElement(By.id("languageSelector")); // Adjust locator as needed
@@ -32,10 +33,12 @@ public class LoginStepDef {
 
 
 
+
     @Given("user login as {string} role")
     public void userLoginAsRole(String role) {
         allPages.loginPage().loginWithRole(role);
     }
+
 
 
 }
