@@ -18,17 +18,6 @@ public class LoginStepDef {
         Driver.getDriver().get(ConfigReader.getProperty(url));
     }
 
-    @When("the user clicks on {string}")
-    public void theUserClicksOn(String Login) {
-       click(allPages.loginPage().Login);
-    }
-
-    @And("the user enters customer credentials in the Email and Password fields")
-    public void theUserEntersCustomerCredentialsInTheEmailAndPasswordFields() {
-        allPages.loginPage().emailField.sendKeys(ConfigReader.getProperty("customerEmail"));
-        allPages.loginPage().password.sendKeys(ConfigReader.getProperty("customerPassword"));
-    }
-
     @And("the user clicks the Login button")
     public void theUserClicksTheLoginButton() {
         WebElement loginButton = Driver.getDriver().findElement(By.xpath("//button[text()='Login']")); // Adjust locator as needed
@@ -41,5 +30,7 @@ public class LoginStepDef {
         click(languageButton);
     }
 
-
+    @Given("the user has an active customer account")
+    public void theUserHasAnActiveCustomerAccount() {
+    }
 }
