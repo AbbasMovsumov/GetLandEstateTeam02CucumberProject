@@ -46,16 +46,22 @@ public class NewAdvertsPage {
     public WebElement terraceDrpdown;
 
 
-    @FindBy(xpath ="//input[@type='file']")
+    @FindBy(xpath = "//input[@type='file']")
     public WebElement uploadImage;
 
-    @FindBy(xpath ="//button[text()='Create']")
+    @FindBy(xpath = "//button[text()='Create']")
     public WebElement createButton;
-     @FindBy(xpath ="//*[text()='Advert created successfully']")
+    @FindBy(xpath = "//*[text()='Advert created successfully']")
     public WebElement advertAppearedMessage;
 
-
-
+    @FindBy(xpath = "//*[text()='Enter a title']")
+    public WebElement titleWarningMessage;
+    @FindBy(xpath = "//*[text()='Enter a description']")
+    public WebElement descriptionWarningMessage;
+    @FindBy(xpath = "//*[text()='newAdvertPageTranslations.requiredAddress']")
+    public WebElement adressWarningMessage;
+    @FindBy(xpath = "//*[text()='Each image should be a maximum of 3 MB']")
+    public WebElement imageWarningMessage;
 
 
 }
