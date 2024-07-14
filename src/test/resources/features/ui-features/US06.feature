@@ -14,7 +14,7 @@ Feature: Rent advertisement as a Manager
     And user select "Country" as "France" on advert page
     And user select "City" as "Ain" on advert page
     And user select "District" as "Amberieu-en-Bugey" on advert page
-    And user set "Adress" as "Rue de la Petite Croze" on advert page
+    And user set "Address" as "Rue de la Petite Croze" on advert page
     And user set "Size" as "122" on advert page
     And user set "Bedrooms" as "3" on advert page
     And user set "Bathrooms" as "2" on advert page
@@ -25,6 +25,45 @@ Feature: Rent advertisement as a Manager
     And user select "Terrace" as "Yes" on advert page
     And user upload the image "RentHouse.jpg" on advert page
     And user clicks create button on advert page
-    Then user see the success message as "Advert created succesfully"
+    Then user see the success message as "Advert created successfully"
 
-Scenario:
+
+  Scenario: TC02_Error messages should appear when title, description and address boxes are left empty.
+    And  user set "Title" as "" on advert page
+    And  user set "Description" as "" on advert page
+    And  user set "Address" as "" on advert page
+    #to see error need to click somewhere on page
+    And  user set "Description" as "" on advert page
+    #
+    Then user see error text as "Enter a title" for "Title" on advert page
+    Then user see error text as "Enter a description" for "Description" on advert page
+    Then user see error text as "newAdvertPageTranslations.requiredAddress" for "Address" on advert page
+    And assert all
+
+  Scenario: TC03_Error message should appear when an image over 3 MB is uploaded.
+      And user upload the image "RentHouseOver3MB.jpg" on advert page
+      Then user see error text as "Each image should be a maximum of 3 MB" for "Upload image" on advert page
+
+  Scenario: TC04_The Create button should not be clickable if the properties fields are not filled in.
+    And user set "Title" as "House Rent Advert" on advert page
+    And user set "Description" as "Dublex, mountain view" on advert page
+    And user set "Price" as "2000" on advert page
+    And user select "Advert Type" as "Rent" on advert page
+    And user select "Category" as "House" on advert page
+    And user select "Country" as "France" on advert page
+    And user select "City" as "Ain" on advert page
+    And user select "District" as "Amberieu-en-Bugey" on advert page
+    And user set "Address" as "Rue de la Petite Croze" on advert page
+    And user set "Size" as "" on advert page
+    And user set "Bedrooms" as "" on advert page
+    And user set "Bathrooms" as "" on advert page
+    And user select "Garage" as "Yes" on advert page
+    And user set "Year of Build" as "" on advert page
+    And user select "Furniture" as "No" on advert page
+    And user set "Maintenance Fee" as "" on advert page
+    And user select "Terrace" as "Yes" on advert page
+    And user upload the image "RentHouse.jpg" on advert page
+    Then user verify that create button is not clickable
+
+
+
