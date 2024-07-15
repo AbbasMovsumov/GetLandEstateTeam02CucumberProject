@@ -1,3 +1,4 @@
+@US06
 Feature: Rent advertisement as a Manager
 
   Background: Landing New Advert page
@@ -26,6 +27,8 @@ Feature: Rent advertisement as a Manager
     And user upload the image "RentHouse.jpg" on advert page
     And user clicks create button on advert page
     Then user see the success message as "Advert created successfully"
+    Then user verify the image uploaded successfully on my adverts page
+    Then assert all
 
 
   Scenario: TC02_Error messages should appear when title, description and address boxes are left empty.
@@ -34,15 +37,14 @@ Feature: Rent advertisement as a Manager
     And  user set "Address" as "" on advert page
     #to see error need to click somewhere on page
     And  user set "Description" as "" on advert page
-    #
     Then user see error text as "Enter a title" for "Title" on advert page
     Then user see error text as "Enter a description" for "Description" on advert page
     Then user see error text as "newAdvertPageTranslations.requiredAddress" for "Address" on advert page
     And assert all
 
   Scenario: TC03_Error message should appear when an image over 3 MB is uploaded.
-      And user upload the image "RentHouseOver3MB.jpg" on advert page
-      Then user see error text as "Each image should be a maximum of 3 MB" for "Upload image" on advert page
+    And user upload the image "RentHouseOver3MB.jpg" on advert page
+    Then user see error text as "Each image should be a maximum of 3 MB" for "Upload image" on advert page
 
   Scenario: TC04_The Create button should not be clickable if the properties fields are not filled in.
     And user set "Title" as "House Rent Advert" on advert page
@@ -65,5 +67,22 @@ Feature: Rent advertisement as a Manager
     And user upload the image "RentHouse.jpg" on advert page
     Then user verify that create button is not clickable
 
+  @TC05
+  Scenario Outline:TC05 Create button should be disabled unless all the fields are not filled
+    And user fill the fields "<Title>", "<Description>","<Price>","<Advert Type>","<Country>" ,"<City>","<District>""<Address>"
+    And user upload the image "RentHouse.jpg" on advert page
+    Then user verify that create button is not clickable
+    #And user wait "1" seconds
+
+    Examples:
+      | Title                  | Description | Price | Advert Type | Country | City | District          | Address           |
+      |                        | adkgkvb     | 120   | Rent        | France  | Ain  | Amberieu-en-Bugey | sorma be kardesim |
+      | hayaller ve gercekler  |             | 140   | Rent        | France  | Ain  | Amberieu-en-Bugey | sananes           |
+      | adfhjk                 | khgk        |       | Rent        | France  | Ain  | Amberieu-en-Bugey | sorma be kardesim |
+      | sendevarya             | adkgkvb     | 120   |             | France  | Ain  | Amberieu-en-Bugey | sorma be kardesim |
+      | gorelimneyler          | adkgkvb     | 120   | Rent        | France  | Ain  | Amberieu-en-Bugey | sorma be kardesim |
+      | neylerseguzel          | adkgkvb     | 120   | Rent        |         | Ain  | Amberieu-en-Bugey | sorma be kardesim |
+      | suphenmivar            | adkgkvb     | 120   | Rent        | France  |      | Amberieu-en-Bugey | sorma be kardesim |
+      | ogrenelimhayirliseyler | adkgkvb     | 120   | Rent        | France  | Ain  |                   | sorma be kardesim |
 
 

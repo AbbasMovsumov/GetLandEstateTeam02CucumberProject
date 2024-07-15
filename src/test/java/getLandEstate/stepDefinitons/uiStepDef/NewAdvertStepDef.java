@@ -1,16 +1,20 @@
 package getLandEstate.stepDefinitons.uiStepDef;
 
 import getLandEstate.pages.Pages;
+import getLandEstate.utilities.Driver;
 import getLandEstate.utilities.ReusableMethods;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.asserts.SoftAssert;
 
 import static junit.framework.TestCase.*;
 
 public class NewAdvertStepDef {
     Pages allpages = new Pages();
+
+
     SoftAssert softAssert = new SoftAssert();
 
     @And("user set {string} as {string} on advert page")
@@ -108,7 +112,7 @@ public class NewAdvertStepDef {
         String expectedAlertMessage = "Advert created successfully";
         ReusableMethods.visibleWait(allpages.newAdvertsPage().advertAppearedMessage, 2);
         String actualAlertMessage = allpages.newAdvertsPage().advertAppearedMessage.getText();
-        assertEquals(expectedAlertMessage, actualAlertMessage);
+        softAssert.assertEquals(expectedAlertMessage, actualAlertMessage);
     }
 
     @Then("user see error text as {string} for {string} on advert page")
@@ -125,7 +129,7 @@ public class NewAdvertStepDef {
                 softAssert.assertEquals(errorText, allpages.newAdvertsPage().adressWarningMessage.getText());
                 break;
             case "Upload image":
-                softAssert.assertEquals("Each image should be a maximum of 3 MB", allpages.newAdvertsPage().imageWarningMessage.getText());
+                softAssert.assertEquals(errorText, allpages.newAdvertsPage().imageWarningMessage.getText());
                 break;
             default:
                 throw new IllegalArgumentException(String.format("Unexpected field as %s", field));
@@ -139,5 +143,26 @@ public class NewAdvertStepDef {
     @Then("user verify that create button is not clickable")
     public void userVerifyThatCreateButtonIsNotClickable() {
       assertTrue(!(allpages.newAdvertsPage().createButton.isEnabled()));
+    }
+
+
+
+    @And("user wait {string} seconds")
+    public void userWaitSeconds(int second) {
+        ReusableMethods.waitForSecond(second);
+    }
+
+
+    @And("user fill the fields {string}, {string},{string},{string},{string} ,{string},{string}{string}")
+    public void userFillTheFields(String title, String description, String price, String advertType, String country, String city, String district, String address) {
+        allpages.newAdvertsPage().titleBox.sendKeys(title);
+        allpages.newAdvertsPage().descriptionBox.sendKeys(description);
+        allpages.newAdvertsPage().priceBox.sendKeys(price);
+        allpages.newAdvertsPage().advertTypeDrpdown.sendKeys(advertType+Keys.TAB);
+        allpages.newAdvertsPage().countryDrpdown.sendKeys(country+Keys.TAB);
+        allpages.newAdvertsPage().cityDrpdown.sendKeys(city+Keys.TAB);
+        allpages.newAdvertsPage().districtDrpdown.sendKeys(district+Keys.TAB);
+        allpages.newAdvertsPage().adressBox.sendKeys(address);
+
     }
 }

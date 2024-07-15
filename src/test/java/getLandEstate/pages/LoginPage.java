@@ -1,6 +1,7 @@
 package getLandEstate.pages;
 
 import getLandEstate.utilities.ConfigReader;
+import getLandEstate.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,10 +21,12 @@ public class LoginPage {
     public WebElement password;
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement loginButton;
-    @FindBy(xpath = "//*[@href='/login']")
-    public WebElement Login;
 
+
+      Pages allpages = new Pages();
     public void loginWithRole(String role) {
+        Driver.getDriver().get(ConfigReader.getProperty("url"));
+        allpages.homePage().login.click();
 
         switch (role) {
             case "Admin":
