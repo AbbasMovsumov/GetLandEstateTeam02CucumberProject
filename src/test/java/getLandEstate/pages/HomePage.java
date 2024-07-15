@@ -35,5 +35,8 @@ public class HomePage {
     @FindBy(xpath = "//*[text()='Create Property']")
     public WebElement createPropertyButton;
 
+    @FindBy(xpath = "//*[@href='/login']")
+    public WebElement login;
+
 
 }
