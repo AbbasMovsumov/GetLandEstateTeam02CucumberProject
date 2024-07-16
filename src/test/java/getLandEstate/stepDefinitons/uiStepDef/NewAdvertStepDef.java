@@ -146,6 +146,30 @@ public class NewAdvertStepDef {
     }
 
 
+    @Then("the user should see datas as Turkish")
+    public void theUserShouldSeeDatasAsTurkish() {
+        String actual = allpages.newAdvertsPage().bedroomsLabel.getText();
+        String expected = "Yatak Odaları";
+        assertEquals(expected, actual);
+    }
+
+    @And("the user clicks to ilan ekle button")
+    public void theUserClicksToIlanEkleButton() {
+        allpages.homePage().ilanEkleButton.click();
+    }
+
+    @And("the user clicks to an advert")
+    public void theUserClicksToAnAdvert() {
+        allpages.propertiesPage().propertyCard.click();
+    }
+
+    @And("the user should see the page Turkish")
+    public void theUserShouldSeeThePageTurkish() {
+        String actual = allpages.propertiesPage().detailsTitle.getText();
+        String expected = "DETAYLAR";
+        assertEquals(expected, actual);
+
+
 
     @And("user wait {string} seconds")
     public void userWaitSeconds(int second) {
