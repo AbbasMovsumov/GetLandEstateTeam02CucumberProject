@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import static getLandEstate.utilities.Driver.getDriver;
+
 public class NewAdvertsPage {
     public NewAdvertsPage() {
         PageFactory.initElements(Driver.getDriver(), this);
@@ -62,6 +64,9 @@ public class NewAdvertsPage {
     public WebElement adressWarningMessage;
     @FindBy(xpath = "//*[text()='Each image should be a maximum of 3 MB']")
     public WebElement imageWarningMessage;
+    @FindBy(xpath = "//label[@for='Bedrooms']")
+    public WebElement bedroomsLabel;
+
 
 
 }

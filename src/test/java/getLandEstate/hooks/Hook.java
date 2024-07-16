@@ -2,6 +2,7 @@ package getLandEstate.hooks;
 
 
 import getLandEstate.utilities.Driver;
+import io.cucumber.java.After;
 
 public class Hook {
 
@@ -28,7 +29,11 @@ public class Hook {
         }
     }*/
 
+    @After
+    public void tearDown() throws Exception {
+        Driver.closeDriver();
 
+    }
 
 
 }

@@ -11,4 +11,9 @@ public class CPDashboardPage {
     @FindBy(xpath = "//*[text()='Back to Site']")
     public WebElement backToSiteMenu;
 
+    @FindBy(xpath = "(//div[@class='card-header'])[3]")
+    public WebElement rentAdvertsGraph;
+
+
+
 }
