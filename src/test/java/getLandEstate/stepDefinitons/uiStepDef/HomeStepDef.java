@@ -1,14 +1,14 @@
 package getLandEstate.stepDefinitons.uiStepDef;
 
-import getLandEstate.pages.HomePageSale;
+import getLandEstate.pages.HomePage;
 import getLandEstate.utilities.Driver;
 import getLandEstate.utilities.ReusableMethods;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class HomeStepDefSale extends ReusableMethods {
-    HomePageSale homePageSale=new HomePageSale();
+public class HomeStepDef extends ReusableMethods {
+    HomePage homePageSale=new HomePage();
     @Given("user is on the google page")
     public void user_is_on_the_google_page() {
         Driver.getDriver().get("https://www.getlandestate.com");
@@ -41,17 +41,28 @@ public class HomeStepDefSale extends ReusableMethods {
         // Write code here that turns the phrase above into concrete actions// throw new io.cucumber.java.PendingException();
     }
     @Then("user enters {string}")
-    public void user_enters(String string) {
+    public void user_enters(String string  ) {
         // Write code here that turns the phrase above into concrete actions
     }
     @Then("user clicks search button")
     public void user_clicks_search_button() {
         // Write code here that turns the phrase above into concrete actions
     }
-    @Then("user enters Price Range {string} and {string}")
-    public void user_enters_price_range_and(String price , String range) {
+    @Then("user clicks Minimum button")
+    public void user_clicks_minimum_button() {
         // Write code here that turns the phrase above into concrete actions
-
+    }
+    @Then("user enters minimumValue as {string}")
+    public void user_enters_minimum_value_as(String string) {
+        // Write code here that turns the phrase above into concrete actions
+    }
+    @Then("user clicks Maximum button")
+    public void user_clicks_maximum_button() {
+        // Write code here that turns the phrase above into concrete actions
+    }
+    @Then("user enters maximumValue as {string}")
+    public void user_enters_maximum_value_as(String string) {
+        // Write code here that turns the phrase above into concrete actions
     }
     @Then("user cliks Advert Type button")
     public void user_cliks_advert_type_button() {
@@ -68,62 +79,70 @@ public class HomeStepDefSale extends ReusableMethods {
         // Write code here that turns the phrase above into concrete actions
 
     }
-    @Then("user choeses \"<House>\" Category")
-    public void user_choeses_house_category() {
+    @Then("user clicks Advert Type button")
+    public void user_clicks_advert_type_button() {
+        // Write code here that turns the phrase above into concrete actions
+    }
+
+    @Then("user chooses \"<Sale>\"Advert Type")
+    public void user_chooses_sale_advert_type() {
+        // Write code here that turns the phrase above into concrete actions
+    }
+
+    @Then("user clicks Category button")
+    public void user_clicks_category_button() {
+        // Write code here that turns the phrase above into concrete actions
+    }
+
+    @Then("user chooses {string} Category")
+    public void user_chooses_category(String string) {
+        // Write code here that turns the phrase above into concrete actions
+    }
+
+    @Then("user clicks Country button")
+    public void user_clicks_country_button() {
+        // Write code here that turns the phrase above into concrete actions
+    }
+
+    @Then("user chooses {string} Country")
+    public void user_chooses_country(String string) {
         // Write code here that turns the phrase above into concrete actions
 
     }
-    @Then("user cliks Country button")
-    public void user_cliks_country_button() {
-        // Write code here that turns the phrase above into concrete actions
+    @Then("user clicks City button")
+    public void user_clicks_city_button() {
 
     }
-    @Then("user choeses \"<Türkiye>\"Country")
-    public void user_choeses_türkiye_country() {
-        // Write code here that turns the phrase above into concrete actions
 
+    @Then("user chooses {string} City")
+    public void user_chooses_city(String string) {
+        // Write code here that turns the phrase above into concrete actions
     }
-    @Then("user cliks City button")
-    public void user_cliks_city_button() {
-        // Write code here that turns the phrase above into concrete actions
 
+    @Then("user chooses City")
+    public void user_chooses_city() {
+        // Write code here that turns the phrase above into concrete actions
     }
-    @Then("user choeses\"<Antalya>\"City")
-    public void user_choeses_antalya_city() {
-        // Write code here that turns the phrase above into concrete actions
 
+    @Then("user clicks District button")
+    public void user_clicks_district_button() {
+        // Write code here that turns the phrase above into concrete actions
     }
-    @Then("user cliks District button")
-    public void user_cliks_district_button() {
-        // Write code here that turns the phrase above into concrete actions
 
+    @Then("user chooses {string} District")
+    public void user_chooses_district(String string) {
+        // Write code here that turns the phrase above into concrete actions
     }
-    @Then("user choeses \"<Alanya>\" District")
-    public void user_choeses_alanya_district( ) {
-        // Write code here that turns the phrase above into concrete actions
 
-    }
-    @Then("user cliks a Search button2")
-    public void user_cliks_a_search_button2() {
+    @Then("user clicks a Search button")
+    public void user_clicks_a_search_button() {
         // Write code here that turns the phrase above into concrete actions
-
     }
     @Then("user sees picture")
     public void user_sees_picture() {
-        // Write code here that turns the phrase above into concrete actions
-    ;
-    }
-    @Then("user click on the Picture Box")
-    public void user_click_on_the_picture_box() {
-        // Write code here that turns the phrase above into concrete actions
 
     }
 
-   @Then("user cliks a Search button")
-    public void user_cliks_a_search_button() {
-            // Write code here that turns the phrase above into concrete actions
-
-        }
     @Then("user clicks on the Picture")
     public void user_click_on_the_picture() {
             // Write code here that turns the phrase above into concrete actions
@@ -137,4 +156,8 @@ public class HomeStepDefSale extends ReusableMethods {
 
 
 
-}
+    }
+
+
+
+

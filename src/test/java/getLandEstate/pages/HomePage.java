@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePageSale {
+public class HomePage {
 
-    public HomePageSale(){PageFactory.initElements(Driver.getDriver(), this); }
+    public HomePage(){PageFactory.initElements(Driver.getDriver(), this); }
 
     @FindBy(xpath = "//*[@name=`query']")
     public WebElement searchButton;
@@ -38,5 +38,20 @@ public class HomePageSale {
 
     @FindBy(xpath = "//*[@class=`property-card card']")
     public WebElement pictureBox;
+
+    public void homeApplication (String minimumValue, String maximumValue){
+        searchButton.click();
+        advertTypeButton.click();
+        categoryButton.click();
+        countryButton.click();
+        cityButton.click();
+        searchButton2.click();
+        pictureBox.click();
+
+        advertTypeButton.sendKeys(minimumValue);
+        advertTypeButton.sendKeys(maximumValue);
+    }
+
+
 }
 
