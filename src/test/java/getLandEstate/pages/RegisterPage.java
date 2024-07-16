@@ -33,7 +33,7 @@ public class RegisterPage {
     public WebElement registerPrivacyPolicy;
     @FindBy(xpath = "//button[@class='submit-button btn btn-secondary']")
     public WebElement registerSubmitButton;
-    @FindBy(xpath = "//span[.='Success']")
+    @FindBy(xpath = "//span[@class='p-toast-summary']")
     public WebElement successMessage;
     @FindBy(xpath = "//div[@class='p-toast-detail']")
     public WebElement longSuccessMsg;
@@ -49,9 +49,16 @@ public class RegisterPage {
     public WebElement passwordIsRequired;
     @FindBy(xpath = "//*[.='Confirm password is required']")
     public WebElement confirmPasswordIsRequired;
+    @FindBy(xpath = "//*[.='Phone is required']")
+    public WebElement phoneIsRequired;
+    @FindBy(xpath = "//*[.='Invalid email']")
+    public WebElement invalidEmail;
+    @FindBy(xpath = "//*[.='At least 8 characters']")
+    public WebElement atLeast8Characters;
+    @FindBy(xpath = "//*[.='Phone number already exists.']")
+    public WebElement phoneNumberIsAlreadyExists;
+    @FindBy(xpath = "//*[.='Passwords must match']")
+    public WebElement passwordsMustMatch;
 
-    public void registerCuctomerInfo(String firstname,String lastname,String phone,String email,String enter_password,String confirm_password){
-
-    }
 }
 

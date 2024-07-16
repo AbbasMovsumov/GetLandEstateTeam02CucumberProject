@@ -60,6 +60,8 @@ public class HomePage {
     public WebElement propertiesButton;
 
 
+    @FindBy(xpath = "//*[@href='/login']")
+    public WebElement login;
 
 
 
