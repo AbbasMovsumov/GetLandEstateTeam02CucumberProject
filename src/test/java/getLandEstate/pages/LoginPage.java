@@ -1,15 +1,11 @@
 package getLandEstate.pages;
 
 import getLandEstate.utilities.ConfigReader;
-<<<<<<< Updated upstream
+
 
 import getLandEstate.utilities.ReusableMethods;
 
 import getLandEstate.utilities.Driver;
-
-=======
-import getLandEstate.utilities.Driver;
->>>>>>> Stashed changes
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -17,8 +13,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import static getLandEstate.utilities.Driver.getDriver;
 
-public class LoginPage {
+
     Pages allpages = new Pages();
+
   
    public LoginPage() {
         PageFactory.initElements(getDriver(), this);
@@ -32,15 +29,15 @@ public class LoginPage {
     public WebElement loginButton;
 
 
-      Pages allpages = new Pages();
+     
     public void loginWithRole(String role) {
-<<<<<<< Updated upstream
+
         Driver.getDriver().get(ConfigReader.getProperty("url"));
         allpages.homePage().login.click();
-=======
+
 //        Driver.getDriver().get(ConfigReader.getProperty("url"));
 //        allpages.homePage().login.click();
->>>>>>> Stashed changes
+
 
         switch (role) {
             case "Admin":
@@ -63,5 +60,6 @@ public class LoginPage {
         }
 
     }
+
 }
 
