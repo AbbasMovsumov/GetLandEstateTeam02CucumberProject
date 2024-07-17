@@ -2,7 +2,10 @@ package getLandEstate.pages;
 
 import getLandEstate.utilities.Driver;
 import getLandEstate.utilities.ReusableMethods;
+<<<<<<< Updated upstream
 import org.openqa.selenium.JavascriptExecutor;
+=======
+>>>>>>> Stashed changes
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -17,6 +20,8 @@ import static getLandEstate.utilities.Driver.getDriver;
 public class HomePage {
 
     private WebDriverWait wait;
+
+    public ReusableMethods login;
 
     public HomePage() {
         PageFactory.initElements(Driver.getDriver(), this);
@@ -44,6 +49,7 @@ public class HomePage {
     @FindBy(xpath = "//span[@class='d-none d-lg-block']")
     public WebElement createPropertyButton;
 
+
     @FindBy(xpath = "//*[text()='İlan Ekle']")
     public WebElement ilanEkleButton;
 
@@ -62,7 +68,6 @@ public class HomePage {
 
     @FindBy(xpath = "//*[@href='/login']")
     public WebElement login;
-
 
 
 
