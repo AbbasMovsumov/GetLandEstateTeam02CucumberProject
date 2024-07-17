@@ -14,4 +14,9 @@ public class CPDashboardPage {
     public WebElement contactMessagesMenu;
 
 
+    @FindBy(xpath = "(//div[@class='card-header'])[3]")
+    public WebElement rentAdvertsGraph;
+
+
+
 }
