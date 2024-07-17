@@ -19,5 +19,7 @@ public class CPDashboardPage {
 
 
 
+    @FindBy(xpath = "//a[@title='Adverts']")
+    public WebElement advertsButton;
 
 }
