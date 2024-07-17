@@ -168,7 +168,7 @@ public class NewAdvertStepDef {
         String actual = allpages.propertiesPage().detailsTitle.getText();
         String expected = "DETAYLAR";
         assertEquals(expected, actual);
-
+    }
 
 
     @And("user wait {string} seconds")
