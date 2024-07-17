@@ -10,6 +10,9 @@ public class CPDashboardPage {
     }
     @FindBy(xpath = "//*[text()='Back to Site']")
     public WebElement backToSiteMenu;
+    @FindBy(xpath = "//span[text()='ContactMessages']")
+    public WebElement contactMessagesMenu;
+
 
     @FindBy(xpath = "(//div[@class='card-header'])[3]")
     public WebElement rentAdvertsGraph;

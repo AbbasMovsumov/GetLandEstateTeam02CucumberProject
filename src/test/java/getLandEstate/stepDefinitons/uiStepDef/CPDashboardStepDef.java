@@ -13,9 +13,14 @@ public class CPDashboardStepDef {
         allPages.controlPanelDashboardPage().backToSiteMenu.click();
     }
 
+    @When("user clicks ContactMessages")
+    public void userClicksContactMessages() {
+        allPages.controlPanelDashboardPage().contactMessagesMenu.click();
+
     @And("the user should see the page as Turkish")
     public void theUserShouldSeeThePageAsTurkish() {
        String rentAdvertsGraphText = allPages.controlPanelDashboardPage().rentAdvertsGraph.getText();
        assertTrue(rentAdvertsGraphText.contains("Kiralıkİlanlar"));
+
     }
 }

@@ -20,7 +20,8 @@ import org.junit.runner.RunWith;
 
         features = "src/test/resources/features/ui-features",
         glue = {"getLandEstate.stepDefinitons.uiStepDef", "getLandEstate/hooks"},
-        tags = "@US01",
+
+        tags = "@US06",
         dryRun = false,
         monochrome = false//eger true kullanirsak konsoldaki ciktilari tek renk siyah olarak verir
 )
