@@ -31,6 +31,7 @@ public class CPDashboardStepDef {
     @When("user clicks ContactMessages")
     public void userClicksContactMessages() {
         allPages.controlPanelDashboardPage().contactMessagesMenu.click();
+    }
 
     @And("the user should see the page as Turkish")
     public void theUserShouldSeeThePageAsTurkish() {
