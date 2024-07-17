@@ -13,6 +13,15 @@ public class CPDashboardStepDef {
         allPages.controlPanelDashboardPage().backToSiteMenu.click();
     }
 
+    @When("User clicks on the Tour requests button")
+    public void userClicksOnTheTourRequestsButton() {
+    }
+
+    /*@When("User clicks on the Tour requests button")
+    public void userClicksOnTheTourRequestsButton() {
+        allPages.controlPanelDashboardPage().
+    }*/
+
     @When("user clicks ContactMessages")
     public void userClicksContactMessages() {
         allPages.controlPanelDashboardPage().contactMessagesMenu.click();
@@ -23,4 +32,5 @@ public class CPDashboardStepDef {
        assertTrue(rentAdvertsGraphText.contains("Kiralıkİlanlar"));
 
     }
+
 }
