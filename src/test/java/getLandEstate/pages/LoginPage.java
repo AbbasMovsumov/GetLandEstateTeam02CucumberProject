@@ -14,6 +14,7 @@ import org.openqa.selenium.support.PageFactory;
 import static getLandEstate.utilities.Driver.getDriver;
 
 public class LoginPage {
+
   
    public LoginPage() {
         PageFactory.initElements(getDriver(), this);
@@ -53,5 +54,6 @@ public class LoginPage {
         }
 
     }
+
 }
 

@@ -9,19 +9,19 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.interactions.Actions;
-
 import java.time.Duration;
 
 import static getLandEstate.utilities.Driver.getDriver;
 
 public class HomePage {
-
+  
     private WebDriverWait wait;
 
-    public HomePage() {
+      public HomePage() {
         PageFactory.initElements(Driver.getDriver(), this);
         wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
     }
+
 
     @FindBy(className = "dropdown-toggle")
     public WebElement languageDropdown;
@@ -63,6 +63,9 @@ public class HomePage {
     @FindBy(xpath = "//*[@href='/login']")
     public WebElement login;
 
+    
+    @FindBy(xpath = "//*[@name=`query']")
+    public WebElement searchButton;
 
 
 
