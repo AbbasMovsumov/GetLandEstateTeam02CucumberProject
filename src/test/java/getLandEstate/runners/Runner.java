@@ -13,16 +13,20 @@ import org.junit.runner.RunWith;
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml",
                 "rerun:TestOutput/failed_scenario.txt"
-                //rerun plugin i ile fail olan scenariolari burada belirtmis oldugumuz failed_scenario.txt dosyasi icinde tutariz
         },
+                //rerun plugin i ile fail olan scenariolari burada belirtmis oldugumuz failed_scenario.txt dosyasi icinde tutariz
+
+
+
         features = "src/test/resources/features/ui-features",
-        glue = {"getLandEstate/stepDefinitions", "getLandEstate/hooks"},
-        tags = "0",
+        glue = {"getLandEstate.stepDefinitons.uiStepDef", "getLandEstate/hooks"},
+
+        tags = "@US06",
         dryRun = false,
         monochrome = false//eger true kullanirsak konsoldaki ciktilari tek renk siyah olarak verir
 )
 public class Runner {
-        // merhaba
+
 
 }
 /*

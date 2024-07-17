@@ -1,1 +1,9 @@
+
 file:src/test/resources/features/ui-features/us12.feature:32
+
+
+file:src/test/resources/features/ui-features/US06.feature:52:85:86:88:89:91
+file:src/test/resources/features/ui-features/US04.feature:82:89:98
+file:src/test/resources/features/ui-features/US01.feature:40
+
+
