@@ -26,6 +26,6 @@ public class LoginStepDef {
 
     @When("user clicks to Login")
     public void userClicksToLogin() {
-        allPages.loginPage().Login.click();
+        allPages.homePage().login.click();
     }
 }
