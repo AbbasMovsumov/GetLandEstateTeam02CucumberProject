@@ -9,4 +9,13 @@ public class CPDashboardStepDef {
     public void userClicksBackToSiteButton() {
         allPages.controlPanelDashboardPage().backToSiteMenu.click();
     }
+
+    @When("User clicks on the Tour requests button")
+    public void userClicksOnTheTourRequestsButton() {
+    }
+
+    /*@When("User clicks on the Tour requests button")
+    public void userClicksOnTheTourRequestsButton() {
+        allPages.controlPanelDashboardPage().
+    }*/
 }

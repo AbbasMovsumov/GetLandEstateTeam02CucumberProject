@@ -11,4 +11,5 @@ public class CPDashboardPage {
     @FindBy(xpath = "//*[text()='Back to Site']")
     public WebElement backToSiteMenu;
 
+
 }
