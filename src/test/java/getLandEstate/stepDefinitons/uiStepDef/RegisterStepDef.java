@@ -249,7 +249,7 @@ public class RegisterStepDef {
 
     @When("the customer clicks on the login link")
     public void theCustomerClicksOnTheLoginLink() {
-        allPages.loginPage().loginButton.click();
+        allPages.homePage().login.click();
     }
 
     @And("customer enters own {string} in the email field")

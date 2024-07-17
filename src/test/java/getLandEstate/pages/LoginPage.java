@@ -14,9 +14,10 @@ import org.openqa.selenium.support.PageFactory;
 import static getLandEstate.utilities.Driver.getDriver;
 
 
+public class LoginPage {
+
     Pages allpages = new Pages();
 
-  
    public LoginPage() {
         PageFactory.initElements(getDriver(), this);
     }

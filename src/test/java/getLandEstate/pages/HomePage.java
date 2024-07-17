@@ -19,7 +19,7 @@ public class HomePage {
   
     private WebDriverWait wait;
 
-    public ReusableMethods login;
+
 
       public HomePage() {
 
