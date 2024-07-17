@@ -9,4 +9,9 @@ public class CPDashboardStepDef {
     public void userClicksBackToSiteButton() {
         allPages.controlPanelDashboardPage().backToSiteMenu.click();
     }
+
+    @When("user clicks ContactMessages")
+    public void userClicksContactMessages() {
+        allPages.controlPanelDashboardPage().contactMessagesMenu.click();
+    }
 }
